@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require'faker'
+
+Potin.destroy_all
+
+20.times do
+potins = Potin.create(title: Faker::ChuckNorris.fact,content: Faker::Hipster.paragraph)
+
+end
